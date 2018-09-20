@@ -38,8 +38,16 @@
 
         Dim degree As Integer = getIntegerFromUser()
         Console.WriteLine("So your polynomial is of degree " & degree)
+
+        Dim terms(degree, 2) As Integer
+
+        For i = 0 To degree
+            For j = 0 To 1
+                terms(i, j) = 3
+                Console.WriteLine(i & " " & j)
+            Next
+        Next
         Console.ReadLine()
-        'Progress!!
     End Sub
 
 End Module
