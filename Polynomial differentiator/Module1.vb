@@ -39,6 +39,7 @@
         Dim degree As Integer = getIntegerFromUser()
         Console.WriteLine("So your polynomial is of degree " & degree)
         Console.ReadLine()
+        'Progress!!
     End Sub
 
 End Module
