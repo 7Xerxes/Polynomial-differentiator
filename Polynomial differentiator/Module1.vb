@@ -39,14 +39,22 @@
         Dim degree As Integer = getIntegerFromUser()
         Console.WriteLine("So your polynomial is of degree " & degree)
 
-        Dim terms(degree, 2) As Integer
+        Dim terms(degree) As Integer
 
-        For i = 0 To degree
-            For j = 0 To 1
-                terms(i, j) = 3
-                Console.WriteLine(i & " " & j)
-            Next
+        For i = 0 To degree - 1
+            Console.Write("Input the coefficient of x^" & degree - i)
+            terms(i) = getIntegerFromUser()
+            terms(i) = terms(i) * (degree - i)
         Next
+
+        For i = 0 To degree - 1
+            If degree - (i + 1) > 0 Then
+                Console.Write(terms(i) & "x^" & degree - (i + 1) & " + ")
+            Else
+                Console.Write(terms(i))
+            End If
+        Next
+
         Console.ReadLine()
     End Sub
 
