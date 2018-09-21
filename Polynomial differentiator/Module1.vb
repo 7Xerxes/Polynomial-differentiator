@@ -47,6 +47,7 @@
             terms(i) = terms(i) * (degree - i)
         Next
 
+        'Now 2.0% more commented
         For i = 0 To degree - 1
             If degree - (i + 1) > 0 Then
                 Console.Write(terms(i) & "x^" & degree - (i + 1) & " + ")
